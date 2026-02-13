@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You 🤍</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Inter', sans-serif;
+    background: linear-gradient(135deg, #fce7f3, #fbcfe8, #f9a8d4);
+    overflow:hidden;
+}
+
+.card {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(20px);
+    padding:50px 40px;
+    border-radius:25px;
+    width:90%;
+    max-width:480px;
+    text-align:center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    animation: fadeUp 1.5s ease;
+}
+
+h1 {
+    font-family:'Playfair Display', serif;
+    font-size:2.2rem;
+    margin-bottom:20px;
+    color:#831843;
+}
+
+p {
+    font-size:1rem;
+    color:#6b7280;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+button {
+    padding:12px 30px;
+    border-radius:30px;
+    border:none;
+    background:#ec4899;
+    color:white;
+    font-size:0.9rem;
+    cursor:pointer;
+    transition:0.3s;
+    letter-spacing:1px;
+}
+
+button:hover {
+    background:#db2777;
+    transform:scale(1.05);
+}
+
+@keyframes fadeUp {
+    from {opacity:0; transform:translateY(30px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+.fadeText {
+    animation: fadeUp 1s ease;
+}
+</style>
+</head>
+<body>
+
+<div class="card" id="card">
+    <h1>mira juliya p 🤍</h1>
+    <p>
+        Kamu itu bukan cuma sekadar orang biasa di hidup aku.  
+        Ada sesuatu tentang kamu yang bikin semuanya terasa lebih hangat.
+        <br><br>
+        Hari ini aku cuma mau bilang…  
+        aku suka cara kamu jadi diri kamu sendiri.
+    </p>
+    <button onclick="next()">Tap Here</button>
+</div>
+
+<script>
+function next() {
+    document.getElementById("card").innerHTML = `
+        <h1 class="fadeText">Happy Valentine's Day 🤍</h1>
+        <p class="fadeText">
+        Kalau kamu izinin,  
+        aku pengen terus kenal kamu lebih jauh.  
+        Pelan-pelan, tanpa buru-buru.  
+        <br><br>
+        With you, everything feels softer.
+        </p>
+    `;
+}
+</script>
+
+</body>
+</html>
